@@ -1,3 +1,10 @@
+/*
+    To run the program run following command.
+    => $ g++ bfs.cpp -std=c++11  
+    => $ ./a.out < maze.txt
+*/
+
+
 #include <iostream>
 #include <vector>
 #include <map>
