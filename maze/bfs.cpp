@@ -43,8 +43,12 @@ void bfs(node start){
         node n = to_visit.front();
         to_visit.pop();
 
+        // for node at front of queue, go through every node in it's associated vector of neighboring
+        // nodes.  if any neighbors are not found in the map of distances (only the start has been initialized), 
+        // the distance is set to be 1 more than the front node's distance value.  the neighbor's predecessor is 
+        // then set to n (front of queue), and the neighbor is pushed to the list of nodes to visit.  The process re-starts 
+        // with that node to visit next
         for (node nbr : nbrs[n]){
-            // not very sure about these steps below
             if (dist.find(nbr) == dist.end()){    
                 dist[nbr] = dist[n] + 1;
                 pred[nbr] = n;
